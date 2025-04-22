@@ -1,13 +1,227 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    height: 100vh;
+    background-color: #20262a;
+    padding: 3rem;
 }
+
+.btn-main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    position: relative;
+    background-color:crimson;
+  
+}
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1002;
+  }
+  
+  .web-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;  
+}
+
+.web-name h3{
+    margin-left: 10px;
+}
+  
+  .hamburger {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+  }
+
+  .rotate-img {
+    width: 50px;
+    height: auto;
+    animation: rotate 5s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+  
+  .menu {
+    position: fixed;
+    top: -200%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    transition: top 0.5s ease;
+    z-index: 1000;
+    background-color: crimson;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 20px;
+  }
+  
+  .menu ul li {
+    margin: 15px 0;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+  }
+  
+  /* Show menu */
+  .menu.show {
+    top: 50px;
+  }
+  
+  /* Cross animation */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(10px,10px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+
+    .menu-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color:crimson;
+        color: white;
+      }
+  
+    .menu {
+      position: static;
+      width: auto;
+      display: block; /* add this if it's hidden before */
+      top: 0 !important;
+      box-shadow: none;
+    }
+  
+    .menu ul {
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu ul li {
+      margin: 15px;
+    }
+  
+    .menu ul li a {
+      font-size: 16px;
+    }
+  }
+
+
+  @media screen and (max-width:768px) {
+    .menu ul li{
+        border-bottom: 1px solid white;
+        padding: 0.5rem;
+    }
+
+    .menu ul li a:hover{
+        color: rgb(24, 192, 222);
+    }
+  }
+
+
+  .error{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 200px;
+
+  }
+
+  .error h1{
+    margin-bottom: 10px;
+  }
+
+  .login{
+    width: 100%;
+    height: 150px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+
+  .inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inputs button{
+    padding: 1.1rem;
+    background-color: crimson;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .active{
+    color: rgb(24, 192, 222) ;
+  }
+
+  .notactive{
+    color: white;
+  }
+
+  
+
+  
+  
