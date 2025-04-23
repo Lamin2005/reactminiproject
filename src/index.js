@@ -7,11 +7,8 @@ import "./index.css";
 //import ThemeApp from "./ThemeSwitchApp";
 //import LanguageApp from "./LanguageChanger/LanguageApp";
 import RouterApp from "./ReactRouter/RouterApp";
-import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
     <RouterApp />
-  </HashRouter>
 );
