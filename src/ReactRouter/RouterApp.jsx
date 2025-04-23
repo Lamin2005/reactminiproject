@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as  Routes, Route } from 'react-router-dom';
 import CalculatorApp from "../Calculator";
 import StoreApp from "../App";
 import ToDoListApp from "../ToDoListApp";
@@ -15,7 +15,7 @@ let RouterApp = () => {
   let [user, setUser] = useState("");
 
   return (
-    <Router>
+    <HashRouter> 
       <Routes>
         <Route path="/" element={<ShareLayout />}>
           <Route index element={<LanguageApp />} />
@@ -32,7 +32,7 @@ let RouterApp = () => {
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
-    </Router>
+    </HashRouter>
   );
 };
 
