@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import CalculatorApp from "../Calculator";
 import StoreApp from "../App";
 import ToDoListApp from "../ToDoListApp";
